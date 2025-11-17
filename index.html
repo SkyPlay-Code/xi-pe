@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class XI Ascend - High-Quality PE Notes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <style>
+        /* ------------------- */
+        /* --- Style Guide --- */
+        /* ------------------- */
+        :root {
+            --bg-color: #F8F9FA;
+            --text-color: #212529;
+            --primary-color: #005A9C; /* Academic Blue */
+            --accent-color: #28a745; /* Success Green */
+            --white-color: #FFFFFF;
+
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        /* ------------------- */
+        /* --- Base & Reset--- */
+        /* ------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            /* NEW: Smooth scrolling for anchor links */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden; /* Prevent horizontal scrollbar from animations */
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            /* NEW: Add transition to all links */
+            transition: color 0.3s ease;
+        }
+
+        section {
+            padding: 80px 0; /* Increased padding for more whitespace */
+        }
+
+        /* ----------------------------- */
+        /* --- NEW: Animation Styles --- */
+        /* ----------------------------- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply this class to any section you want to animate on scroll */
+        .fade-in-section {
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.8s ease forwards;
+            animation-play-state: paused; /* Will be triggered by JS */
+        }
+        
+        /* You will need a tiny bit of JS to trigger this, which we'll add at the bottom */
+
+
+        /* -------------------------- */
+        /* --- Universal Components --- */
+        /* -------------------------- */
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .header nav a {
+            font-weight: 600; /* Slightly thinner than 700 for a cleaner look */
+        }
+
+        .header nav a:hover {
+            color: #003d69;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #e9ecef;
+            color: #6c757d;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ------------------ */
+        /* --- Home Page ---- */
+        /* ------------------ */
+        
+        /* Hero Section */
+        .hero {
+             /* NEW: Subtle gradient background */
+            background-image: linear-gradient(135deg, #f5fbff 0%, #ffffff 100%);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+            color: transparent; /* Make text transparent */
+            /* NEW: Stylish Gradient Text */
+            background-image: linear-gradient(45deg, var(--primary-color), #008080);
+            background-clip: text;
+            -webkit-background-clip: text; /* For Safari */
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            font-weight: 400; /* Regular weight for contrast with heading */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px; /* More horizontal padding */
+            border-radius: 50px; /* Pill-shaped button */
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px); /* Button lifts up */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Shadow gets bigger */
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+        }
+        
+        /* Features Section */
+        .features {
+             text-align: center;
+        }
+        
+        .features h2 {
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-box {
+            background: var(--white-color);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .feature-box:hover {
+             transform: translateY(-8px);
+             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h3 {
+             font-size: 1.25rem;
+             font-weight: 600;
+        }
+        
+        /* Notes Showcase Section */
+        .notes-showcase {
+            background-color: var(--white-color);
+        }
+
+        .notes-showcase h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger cards */
+            gap: 30px;
+        }
+
+        .note-card {
+            background: var(--white-color);
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            /* NEW: Add transition */
+            transition: all 0.3s ease;
+        }
+        
+        .note-card:hover {
+             /* NEW: Hover effect */
+             transform: translateY(-8px);
+             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .note-card h3 {
+            font-weight: 600;
+        }
+        .note-card p {
+            flex-grow: 1;
+            margin-bottom: 25px;
+            color: #495057;
+        }
+        
+        .btn-secondary {
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Class XI Ascend</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#notes">All Notes</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Unlock Your Best Score in Physical Education.</h1>
+                <p>Comprehensive, easy-to-understand notes for Class XI, designed to help you master every concept and ace your exams.</p>
+                <a href="#notes" class="btn btn-primary">Explore All Notes</a>
+            </div>
+        </section>
+
+        <!-- Add class="fade-in-section" to animate sections as you scroll down -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2>Why Choose These Notes?</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>Exam-Focused</h3>
+                        <p>Structured to help you answer any question, from definitions to long-form.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Simple & Clear</h3>
+                        <p>Complex topics are broken down into easy-to-digest points for quick learning.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>100% Free & Ad-Free</h3>
+                        <p>A clean, focused study experience with absolutely no distractions or pop-ups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-showcase" id="notes">
+            <div class="container">
+                <h2>Start Studying Now</h2>
+                <div class="notes-grid">
+                    <div class="note-card">
+                        <h3>Physical Fitness, Wellness & Lifestyle</h3>
+                        <p>Explore the core concepts of physical fitness and its impact on a healthy lifestyle.</p>
+                        <a href="physical-fitness-notes.html" class="btn btn-secondary">View Notes & Download</a>
+                    </div>
+                    <div class="note-card">
+                        <h3>Test, Measurement & Evaluation</h3>
+                        <p>Learn the fundamental principles of testing and measurement in physical education.</p>
+                        <a href="test-measurement-evaluation.html" class="btn btn-secondary">View Notes & Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Class XI Ascend. All Rights Reserved.</p>
+            <p>Notes are prepared based on the latest CBSE curriculum. For educational purposes only.</p>
+            <p>
+                <a href="https://github.com/skyplay-code" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- NEW: Simple JavaScript for fade-in animation trigger -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Add the class 'fade-in-section' to any sections you want to animate
+        document.querySelectorAll('section').forEach(section => {
+             // Exclude the hero section from animation
+            if (!section.classList.contains('hero')) {
+                section.classList.add('fade-in-section');
+                observer.observe(section);
+            }
+        });
+    </script>
+</body>
+</html>
