@@ -3,31 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class XI Ascend - High-Quality PE Notes</title>
+    <!-- Primary SEO -->
+    <title>Class 11 Physical Education Notes (CBSE 2025-26) | Free PDF Download</title>
+    <meta name="description" content="Best Class 11 Physical Education notes for CBSE exams. Chapter-wise summaries on Fitness, Olympism, and SP. Download free PDF notes aligned with latest NCERT syllabus.">
+    <meta name="keywords" content="Class 11 Physical Education Notes, PE Class 11 CBSE, Physical Education Class 11 PDF, Chapter wise notes PE Class 11, Saraswati Physical Education, NCERT PE Class 11">
+    <meta name="author" content="Class XI PE">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook (Makes link look good on WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skyplay-code.github.io/xi-pe/">
+    <meta property="og:title" content="Class 11 Physical Education Notes - Exam Special">
+    <meta property="og:description" content="Free, high-quality handwritten style notes for Class 11 PE. Ace your practicals and theory exams.">
+    <meta property="og:image" content="https://skyplay-code.github.io/xi-pe/thumbnail-image.jpg">
+
+    <!-- Canonical Tag (Prevents duplicate content issues) -->
+    <link rel="canonical" href="https://skyplay-code.github.io/xi-pe/" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 'Patrick Hand' for the "written" headings, 'Nunito' for clear, rounded reading text -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 
-    <!-- CSS Styles -->
     <style>
         /* ------------------- */
-        /* --- Style Guide --- */
+        /* ---  Variables  --- */
         /* ------------------- */
         :root {
-            --bg-color: #F8F9FA;
-            --text-color: #212529;
-            --primary-color: #005A9C; /* Academic Blue */
-            --accent-color: #28a745; /* Success Green */
-            --white-color: #FFFFFF;
-
-            --font-heading: 'Poppins', sans-serif;
-            --font-body: 'Lato', sans-serif;
+            /* Palette: Crayons & Paper */
+            --paper-bg: #fffdf5;     /* Warm creamy paper color */
+            --ink-black: #2d3436;    /* Soft black for text/borders */
+            --grid-line: #e0e0e0;    /* Graph paper lines */
+            
+            /* Crayon Colors */
+            --crayon-blue: #74b9ff;
+            --crayon-yellow: #ffeaa7;
+            --crayon-green: #55efc4;
+            --crayon-red: #ff7675;
+            
+            --border-width: 3px;
+            --shadow-offset: 6px;
         }
 
         /* ------------------- */
-        /* --- Base & Reset--- */
+        /* --- Base Reset  --- */
         /* ------------------- */
         * {
             margin: 0;
@@ -35,348 +55,419 @@
             box-sizing: border-box;
         }
 
-        html {
-            /* NEW: Smooth scrolling for anchor links */
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--paper-bg);
+            color: var(--ink-black);
+            line-height: 1.6;
+            font-size: 1.1rem;
+            
+            /* CSS Pattern: Graph Paper */
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 30px 30px;
         }
 
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            font-size: 18px;
-            overflow-x: hidden; /* Prevent horizontal scrollbar from animations */
+        h1, h2, h3 {
+            font-family: 'Patrick Hand', cursive; /* Handwritten feel */
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .container {
-            max-width: 1140px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            /* NEW: Add transition to all links */
-            transition: color 0.3s ease;
-        }
+        /* ------------------- */
+        /* --- Components  --- */
+        /* ------------------- */
 
-        section {
-            padding: 80px 0; /* Increased padding for more whitespace */
+        /* The "Sticker" Card Style */
+        .card {
+            background: #ffffff;
+            border: var(--border-width) solid var(--ink-black);
+            box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--ink-black);
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.2s ease;
         }
 
-        /* ----------------------------- */
-        /* --- NEW: Animation Styles --- */
-        /* ----------------------------- */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* The "Sketchy" Button */
+        .btn {
+            display: inline-block;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            border: var(--border-width) solid var(--ink-black);
+            background-color: var(--crayon-yellow);
+            color: var(--ink-black);
+            border-radius: 50px; /* Pill shape */
+            box-shadow: 4px 4px 0px var(--ink-black);
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
         }
 
-        /* Apply this class to any section you want to animate on scroll */
-        .fade-in-section {
-            opacity: 0; /* Initially hidden */
-            animation: fadeInUp 0.8s ease forwards;
-            animation-play-state: paused; /* Will be triggered by JS */
+        .btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--ink-black);
         }
-        
-        /* You will need a tiny bit of JS to trigger this, which we'll add at the bottom */
 
+        .btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--ink-black);
+        }
 
-        /* -------------------------- */
-        /* --- Universal Components --- */
-        /* -------------------------- */
+        .btn-blue { background-color: var(--crayon-blue); color: white; text-shadow: 1px 1px 0 #000; }
+        .btn-green { background-color: var(--crayon-green); }
 
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-            backdrop-filter: blur(10px); /* Frosted glass effect */
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        /* Highlighter Text Effect */
+        .highlight {
+            background: linear-gradient(120deg, var(--crayon-yellow) 0%, var(--crayon-yellow) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 85%;
+        }
+
+        /* ------------------- */
+        /* --- Navigation  --- */
+        /* ------------------- */
+        nav {
+            padding: 20px 0;
+            border-bottom: var(--border-width) solid var(--ink-black);
+            background: white;
             position: sticky;
             top: 0;
             z-index: 100;
-            transition: background-color 0.3s ease;
         }
 
-        .header .container {
+        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .header .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+        .logo {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--ink-black);
+            color: white;
+            padding: 5px 15px;
+            transform: rotate(-2deg); /* Playful tilt */
         }
 
-        .header nav ul {
+        .nav-links {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 20px;
         }
 
-        .header nav a {
-            font-weight: 600; /* Slightly thinner than 700 for a cleaner look */
+        .nav-links a {
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
         }
-
-        .header nav a:hover {
-            color: #003d69;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #e9ecef;
-            color: #6c757d;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 14px;
-        }
-        .footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* ------------------ */
-        /* --- Home Page ---- */
-        /* ------------------ */
         
-        /* Hero Section */
+        .nav-links a:hover {
+            border-bottom: 2px solid var(--crayon-blue);
+        }
+
+        /* ------------------- */
+        /* --- Hero Section -- */
+        /* ------------------- */
         .hero {
-             /* NEW: Subtle gradient background */
-            background-image: linear-gradient(135deg, #f5fbff 0%, #ffffff 100%);
+            padding: 80px 0;
             text-align: center;
-            padding: 100px 0;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.2;
-            color: transparent; /* Make text transparent */
-            /* NEW: Stylish Gradient Text */
-            background-image: linear-gradient(45deg, var(--primary-color), #008080);
-            background-clip: text;
-            -webkit-background-clip: text; /* For Safari */
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            max-width: 650px;
-            margin: 0 auto 35px auto;
-            font-weight: 400; /* Regular weight for contrast with heading */
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #555;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 35px; /* More horizontal padding */
-            border-radius: 50px; /* Pill-shaped button */
-            font-weight: 700;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            transform: translateY(-5px); /* Button lifts up */
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Shadow gets bigger */
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: var(--white-color);
-        }
-        
-        /* Features Section */
+        /* ------------------- */
+        /* --- Feature Strip - */
+        /* ------------------- */
         .features {
-             text-align: center;
-        }
-        
-        .features h2 {
-            margin-bottom: 50px;
-        }
-
-        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-        }
-        
-        .feature-box {
-            background: var(--white-color);
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .feature-box:hover {
-             transform: translateY(-8px);
-             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
         }
 
-        .feature-box h3 {
-             font-size: 1.25rem;
-             font-weight: 600;
-        }
-        
-        /* Notes Showcase Section */
-        .notes-showcase {
-            background-color: var(--white-color);
-        }
-
-        .notes-showcase h2 {
+        .feature-item {
             text-align: center;
+            background: #fff;
+            border: var(--border-width) solid var(--ink-black);
+            padding: 20px;
+            /* No heavy shadow here, looking like a sticky note */
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ------------------- */
+        /* --- Notes Grid ---- */
+        /* ------------------- */
+        .notes-section {
+            padding: 40px 0 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
             margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Decorative underline for title */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 8px;
+            background: var(--crayon-green);
+            border-radius: 4px;
+            margin-top: -10px;
+            opacity: 0.6;
         }
 
         .notes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger cards */
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
         .note-card {
-            background: var(--white-color);
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 30px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            /* NEW: Add transition */
-            transition: all 0.3s ease;
+            justify-content: space-between;
+            background: white;
+            /* The "notebook page" look */
+            background-image: linear-gradient(#f0f0f0 1px, transparent 1px);
+            background-size: 100% 24px; 
         }
-        
+
         .note-card:hover {
-             /* NEW: Hover effect */
-             transform: translateY(-8px);
-             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--ink-black);
         }
 
         .note-card h3 {
-            font-weight: 600;
+            background: var(--ink-black);
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            /* Breaking the grid lines for the header */
         }
+
         .note-card p {
-            flex-grow: 1;
             margin-bottom: 25px;
-            color: #495057;
+            background: rgba(255,255,255,0.8); /* Readability over lines */
+        }
+
+        /* ------------------- */
+        /* --- Footer -------- */
+        /* ------------------- */
+        footer {
+            background: var(--ink-black);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 5px solid var(--crayon-blue);
         }
         
-        .btn-secondary {
-            background: var(--primary-color);
-            color: var(--white-color);
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--crayon-yellow);
+            text-decoration: underline;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { display: none; } /* Simplified for demo */
         }
 
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalWebPage",
+      "name": "Class 11 Physical Education Notes",
+      "description": "Comprehensive notes for CBSE Class 11 Physical Education, covering all units including Yoga, Lifestyle, and Measurement.",
+      "educationalLevel": "High School (Class 11)",
+      "learningResourceType": "Lecture Notes",
+      "inLanguage": "en-US",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      }
+    }
+    </script>
 </head>
 <body>
 
-    <header class="header">
+    <!-- Navigation Bar -->
+    <nav>
         <div class="container">
-            <a href="index.html" class="logo">Class XI Ascend</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#notes">All Notes</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+            <a href="#" class="logo">Class XI PE</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#">Syllabus</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Class 11 Physical Education <span class="highlight">Notes & Guide.</span></h1>
+            <p>Hand-crafted notes for Class XI. No fluff, just the concepts you need to write great answers.</p>
+            <a href="#notes" class="btn btn-blue">Open Notebook ✏️</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Unlock Your Best Score in Physical Education.</h1>
-                <p>Comprehensive, easy-to-understand notes for Class XI, designed to help you master every concept and ace your exams.</p>
-                <a href="#notes" class="btn btn-primary">Explore All Notes</a>
+    <main class="container">
+        
+        <!-- Features Strip -->
+        <section class="features">
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <h3>Quick Revision</h3>
+                <p>Perfect points for last-minute study.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <h3>Exam Focused</h3>
+                <p>Based on the latest CBSE pattern.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">💎</span>
+                <h3>Clean Format</h3>
+                <p>Easy to read, easy to remember.</p>
             </div>
         </section>
 
-        <!-- Add class="fade-in-section" to animate sections as you scroll down -->
-        <section class="features" id="features">
-            <div class="container">
-                <h2>Why Choose These Notes?</h2>
-                <div class="features-grid">
-                    <div class="feature-box">
-                        <h3>Exam-Focused</h3>
-                        <p>Structured to help you answer any question, from definitions to long-form.</p>
+        <!-- Notes Section -->
+        <section id="notes" class="notes-section">
+            <h2 class="section-title">Select A Chapter</h2>
+            
+            <div class="notes-grid">
+                
+                <!-- Card 1 -->
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 1</h3>
+                        <p><strong>Changing Trends & Career in Physical Education</strong></p>
                     </div>
-                    <div class="feature-box">
-                        <h3>Simple & Clear</h3>
-                        <p>Complex topics are broken down into easy-to-digest points for quick learning.</p>
+                    <a href="https://skypcode.pythonanywhere.com/Tp1Io" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 2</h3>
+                        <p><strong>Olympic Value Education</strong></p>
                     </div>
-                    <div class="feature-box">
-                        <h3>100% Free & Ad-Free</h3>
-                        <p>A clean, focused study experience with absolutely no distractions or pop-ups.</p>
+                    <a href="https://skypcode.pythonanywhere.com/k7ZAt" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 3</h3>
+                        <p><strong>Physical Fitness, Wellness and Lifestyle</strong></p>
                     </div>
-                </div>
+                    <a href="https://skypcode.pythonanywhere.com/lkFMn" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 6</h3>
+                        <p><strong>Physical Activity and Leadership Training</strong></p>
+                    </div>
+                    <a href="https://skypcode.pythonanywhere.com/O75Va" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 7</h3>
+                        <p><strong>Test, Measurement & Evaluation</strong></p>
+                    </div>
+                    <a href="https://skypcode.pythonanywhere.com/MALmB" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 8</h3>
+                        <p><strong>Fundamentals of Anatomy, Physiology & Kinesiology in Sports</strong></p>
+                    </div>
+                    <a href="https://skypcode.pythonanywhere.com/x659i" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
+                <article class="card note-card">
+                    <div>
+                        <h3>Unit 9</h3>
+                        <p><strong>Psychology and Sports</strong></p>
+                    </div>
+                    <a href="https://skypcode.pythonanywhere.com/tg0Tn" class="btn btn-green">Read Chapter &rarr;</a>
+                </article>
+
             </div>
         </section>
 
-        <section class="notes-showcase" id="notes">
-            <div class="container">
-                <h2>Start Studying Now</h2>
-                <div class="notes-grid">
-                    <div class="note-card">
-                        <h3>Physical Fitness, Wellness & Lifestyle</h3>
-                        <p>Explore the core concepts of physical fitness and its impact on a healthy lifestyle.</p>
-                        <a href="physical-fitness-notes.html" class="btn btn-secondary">View Notes & Download</a>
-                    </div>
-                    <div class="note-card">
-                        <h3>Test, Measurement & Evaluation</h3>
-                        <p>Learn the fundamental principles of testing and measurement in physical education.</p>
-                        <a href="test-measurement-evaluation.html" class="btn btn-secondary">View Notes & Download</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <p>© 2025 Class XI Ascend. All Rights Reserved.</p>
-            <p>Notes are prepared based on the latest CBSE curriculum. For educational purposes only.</p>
-            <p>
-                <a href="https://github.com/skyplay-code" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-            </p>
+            <p>Made with ❤️ for Students.</p>
+            <p>&copy; 2025 Class XI PE. Educational Content.</p>
+            <br>
+            <p><a href="https://github.com/skyplay-code">Visit GitHub Repo</a></p>
         </div>
+        <section class="container" style="margin-top: 50px; opacity: 0.8;">
+        <h4 style="font-family: 'Patrick Hand'; font-size: 1.5rem;">About These Notes</h4>
+        <p style="font-size: 1rem;">
+            Welcome to the ultimate resource for <strong>Class 11 Physical Education (Code 048)</strong>. 
+            Whether you are studying from the <em>Saraswati Health and Physical Education</em> book or NCERT, 
+            these notes cover the latest <strong>2025-26 CBSE Syllabus</strong>. 
+            Designed for quick revision, these chapter-wise summaries help you score high in theory 
+            and viva voice. Topics include Changing Trends in Sports, Olympic Value Education, 
+            and CWSN (Children with Special Needs).
+        </p>
+    </section>
     </footer>
-    
-    <!-- NEW: Simple JavaScript for fade-in animation trigger -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, { threshold: 0.1 });
 
-        // Add the class 'fade-in-section' to any sections you want to animate
-        document.querySelectorAll('section').forEach(section => {
-             // Exclude the hero section from animation
-            if (!section.classList.contains('hero')) {
-                section.classList.add('fade-in-section');
-                observer.observe(section);
-            }
-        });
-    </script>
 </body>
 </html>
